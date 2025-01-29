@@ -1,12 +1,12 @@
 <?php
 
-namespace Overtrue\LaravelLike;
+namespace Captenmasin\LaravelLike;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Overtrue\LaravelLike\Events\Liked;
-use Overtrue\LaravelLike\Events\Unliked;
+use Captenmasin\LaravelLike\Events\Liked;
+use Captenmasin\LaravelLike\Events\Unliked;
 
 class Like extends Model
 {

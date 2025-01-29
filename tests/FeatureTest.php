@@ -4,8 +4,8 @@ namespace Tests;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Event;
-use Overtrue\LaravelLike\Events\Liked;
-use Overtrue\LaravelLike\Events\Unliked;
+use Captenmasin\LaravelLike\Events\Liked;
+use Captenmasin\LaravelLike\Events\Unliked;
 
 class FeatureTest extends TestCase
 {
@@ -20,7 +20,7 @@ class FeatureTest extends TestCase
 
     public function test_basic_features()
     {
-        $user = User::create(['name' => 'overtrue']);
+        $user = User::create(['name' => 'captenmasin']);
         $post = Post::create(['title' => 'Hello world!']);
 
         $user->like($post);
@@ -47,7 +47,7 @@ class FeatureTest extends TestCase
 
     public function test_unlike_features()
     {
-        $user1 = User::create(['name' => 'overtrue']);
+        $user1 = User::create(['name' => 'captenmasin']);
         $user2 = User::create(['name' => 'allen']);
         $user3 = User::create(['name' => 'taylor']);
 
@@ -66,7 +66,7 @@ class FeatureTest extends TestCase
 
     public function test_aggregations()
     {
-        $user = User::create(['name' => 'overtrue']);
+        $user = User::create(['name' => 'captenmasin']);
 
         $post1 = Post::create(['title' => 'Hello world!']);
         $post2 = Post::create(['title' => 'Hello everyone!']);
@@ -85,7 +85,7 @@ class FeatureTest extends TestCase
 
     public function test_like_same_model()
     {
-        $user1 = User::create(['name' => 'overtrue']);
+        $user1 = User::create(['name' => 'captenmasin']);
         $user2 = User::create(['name' => 'allen']);
         $user3 = User::create(['name' => 'taylor']);
 
@@ -97,7 +97,7 @@ class FeatureTest extends TestCase
 
     public function test_object_likers()
     {
-        $user1 = User::create(['name' => 'overtrue']);
+        $user1 = User::create(['name' => 'captenmasin']);
         $user2 = User::create(['name' => 'allen']);
         $user3 = User::create(['name' => 'taylor']);
 
@@ -108,7 +108,7 @@ class FeatureTest extends TestCase
 
         $this->assertCount(2, $post->likers);
         $this->assertEquals(2, $post->totalLikers);
-        $this->assertSame('overtrue', $post->likers[0]['name']);
+        $this->assertSame('captenmasin', $post->likers[0]['name']);
         $this->assertSame('allen', $post->likers[1]['name']);
 
         $sqls = $this->getQueryLog(function () use ($post, $user1, $user2, $user3) {
@@ -122,7 +122,7 @@ class FeatureTest extends TestCase
 
     public function test_object_likers_with_custom_morph_class_name()
     {
-        $user1 = User::create(['name' => 'overtrue']);
+        $user1 = User::create(['name' => 'captenmasin']);
         $user2 = User::create(['name' => 'allen']);
         $user3 = User::create(['name' => 'taylor']);
 
@@ -136,13 +136,13 @@ class FeatureTest extends TestCase
         $user2->like($post);
 
         $this->assertCount(2, $post->likers);
-        $this->assertSame('overtrue', $post->likers[0]['name']);
+        $this->assertSame('captenmasin', $post->likers[0]['name']);
         $this->assertSame('allen', $post->likers[1]['name']);
     }
 
     public function test_eager_loading()
     {
-        $user = User::create(['name' => 'overtrue']);
+        $user = User::create(['name' => 'captenmasin']);
 
         $post1 = Post::create(['title' => 'Hello world!']);
         $post2 = Post::create(['title' => 'Hello everyone!']);
@@ -179,7 +179,7 @@ class FeatureTest extends TestCase
         $post3 = Post::create(['title' => 'Post title3']);
 
         /* @var \Tests\User $user */
-        $user = User::create(['name' => 'overtrue']);
+        $user = User::create(['name' => 'captenmasin']);
 
         $user->like($post1);
         $user->like($post2);

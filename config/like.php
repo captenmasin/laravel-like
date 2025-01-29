@@ -19,7 +19,7 @@ return [
     /*
      * Model name for like record.
      */
-    'like_model' => \Overtrue\LaravelLike\Like::class,
+    'like_model' => \Captenmasin\LaravelLike\Like::class,
 
     /*
      * Model name for liker.

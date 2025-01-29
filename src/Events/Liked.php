@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelLike\Events;
+namespace Captenmasin\LaravelLike\Events;
 
 class Liked extends Event
 {

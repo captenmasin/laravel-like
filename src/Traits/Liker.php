@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelLike\Traits;
+namespace Captenmasin\LaravelLike\Traits;
 
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -10,7 +10,7 @@ use Illuminate\Pagination\AbstractCursorPaginator;
 use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Support\Collection;
 use Illuminate\Support\LazyCollection;
-use Overtrue\LaravelLike\Like;
+use Captenmasin\LaravelLike\Like;
 
 trait Liker
 {
@@ -25,7 +25,7 @@ trait Liker
         /* @var \Illuminate\Database\Eloquent\Model $like */
         $like = \app(config('like.like_model'));
 
-        /* @var \Overtrue\LaravelLike\Traits\Likeable|\Illuminate\Database\Eloquent\Model $object */
+        /* @var \Captenmasin\LaravelLike\Traits\Likeable|\Illuminate\Database\Eloquent\Model $object */
         return $like->where($attributes)->firstOr(
             function () use ($like, $attributes) {
                 return $like->unguarded(function () use ($like, $attributes) {
@@ -44,7 +44,7 @@ trait Liker
      */
     public function unlike(Model $object): bool
     {
-        /* @var \Overtrue\LaravelLike\Like $relation */
+        /* @var \Captenmasin\LaravelLike\Like $relation */
         $relation = \app(config('like.like_model'))
             ->where('likeable_id', $object->getKey())
             ->where('likeable_type', $object->getMorphClass())

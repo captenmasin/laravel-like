@@ -2,34 +2,34 @@
 
 👍 User-like features for Laravel Application.
 
-[![CI](https://github.com/overtrue/laravel-like/actions/workflows/ci.yml/badge.svg)](https://github.com/overtrue/laravel-like/actions/workflows/ci.yml)
+[![CI](https://github.com/captenmasin/laravel-like/actions/workflows/ci.yml/badge.svg)](https://github.com/captenmasin/laravel-like/actions/workflows/ci.yml)
 
-[![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
+[![Sponsor me](https://github.com/captenmasin/captenmasin/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/captenmasin)
 
 ## Installing
 
 ```shell
-composer require overtrue/laravel-like -vvv
+composer require captenmasin/laravel-like -vvv
 ```
 
 ### Configuration and Migrations
 
 ```shell
-php artisan vendor:publish --provider="Overtrue\LaravelLike\LikeServiceProvider"
+php artisan vendor:publish --provider="Captenmasin\LaravelLike\LikeServiceProvider"
 ```
 
 ## Usage
 
 ### Traits
 
-#### `Overtrue\LaravelLike\Traits\Liker`
+#### `Captenmasin\LaravelLike\Traits\Liker`
 
 ```php
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Overtrue\LaravelLike\Traits\Liker;
+use Captenmasin\LaravelLike\Traits\Liker;
 
 class User extends Authenticatable
 {
@@ -39,11 +39,11 @@ class User extends Authenticatable
 }
 ```
 
-#### `Overtrue\LaravelLike\Traits\Likeable`
+#### `Captenmasin\LaravelLike\Traits\Likeable`
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Overtrue\LaravelLike\Traits\Likeable;
+use Captenmasin\LaravelLike\Traits\Likeable;
 
 class Post extends Model
 {
@@ -223,36 +223,36 @@ $user->attachLikeStatus($posts);
 
 | **Event**                             | **Description**                             |
 | ------------------------------------- | ------------------------------------------- |
-| `Overtrue\LaravelLike\Events\Liked`   | Triggered when the relationship is created. |
-| `Overtrue\LaravelLike\Events\Unliked` | Triggered when the relationship is deleted. |
+| `Captenmasin\LaravelLike\Events\Liked`   | Triggered when the relationship is created. |
+| `Captenmasin\LaravelLike\Events\Unliked` | Triggered when the relationship is deleted. |
 
 ## Related packages
 
--   Follow: [overtrue/laravel-follow](https://github.com/overtrue/laravel-follow)
--   Like: [overtrue/laravel-like](https://github.com/overtrue/laravel-like)
--   Favorite: [overtrue/laravel-favorite](https://github.com/overtrue/laravel-favorite)
--   Subscribe: [overtrue/laravel-subscribe](https://github.com/overtrue/laravel-subscribe)
--   Vote: [overtrue/laravel-vote](https://github.com/overtrue/laravel-vote)
--   Bookmark: overtrue/laravel-bookmark (working in progress)
+-   Follow: [captenmasin/laravel-follow](https://github.com/captenmasin/laravel-follow)
+-   Like: [captenmasin/laravel-like](https://github.com/captenmasin/laravel-like)
+-   Favorite: [captenmasin/laravel-favorite](https://github.com/captenmasin/laravel-favorite)
+-   Subscribe: [captenmasin/laravel-subscribe](https://github.com/captenmasin/laravel-subscribe)
+-   Vote: [captenmasin/laravel-vote](https://github.com/captenmasin/laravel-vote)
+-   Bookmark: captenmasin/laravel-bookmark (working in progress)
 
 ## :heart: Sponsor me
 
-[![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me.svg?raw=true)](https://github.com/sponsors/overtrue)
+[![Sponsor me](https://github.com/captenmasin/captenmasin/blob/master/sponsor-me.svg?raw=true)](https://github.com/sponsors/captenmasin)
 
-如果你喜欢我的项目并想支持它，[点击这里 :heart:](https://github.com/sponsors/overtrue)
+如果你喜欢我的项目并想支持它，[点击这里 :heart:](https://github.com/sponsors/captenmasin)
 
 ## Project supported by JetBrains
 
 Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.
 
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/overtrue)
+[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/captenmasin)
 
 ## Contributing
 
 You can contribute in one of three ways:
 
-1. File bug reports using the [issue tracker](https://github.com/overtrue/laravel-likes/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/overtrue/laravel-likes/issues).
+1. File bug reports using the [issue tracker](https://github.com/captenmasin/laravel-likes/issues).
+2. Answer questions or fix bugs on the [issue tracker](https://github.com/captenmasin/laravel-likes/issues).
 3. Contribute new features or update the wiki.
 
 _The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._

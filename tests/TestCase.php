@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Overtrue\LaravelLike\LikeServiceProvider;
+use Captenmasin\LaravelLike\LikeServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {

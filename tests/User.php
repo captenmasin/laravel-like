@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use Overtrue\LaravelLike\Traits\Likeable;
-use Overtrue\LaravelLike\Traits\Liker;
+use Captenmasin\LaravelLike\Traits\Likeable;
+use Captenmasin\LaravelLike\Traits\Liker;
 
 class User extends Model
 {

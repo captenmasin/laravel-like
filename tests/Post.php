@@ -3,7 +3,7 @@
 namespace Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use Overtrue\LaravelLike\Traits\Likeable;
+use Captenmasin\LaravelLike\Traits\Likeable;
 
 class Post extends Model
 {

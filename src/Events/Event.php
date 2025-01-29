@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelLike\Events;
+namespace Captenmasin\LaravelLike\Events;
 
 use Illuminate\Database\Eloquent\Model;
 

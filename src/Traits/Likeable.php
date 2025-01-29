@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelLike\Traits;
+namespace Captenmasin\LaravelLike\Traits;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;

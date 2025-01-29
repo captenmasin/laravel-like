@@ -1,6 +1,6 @@
 <?php
 
-namespace Overtrue\LaravelLike;
+namespace Captenmasin\LaravelLike;
 
 use Illuminate\Support\ServiceProvider;
 
